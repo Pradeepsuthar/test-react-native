@@ -9,7 +9,7 @@ const {width, height} = Dimensions.get('window');
 const Theme = () => {
   const dispatch = useDispatch();
 
-  const color = 'light';
+  const color:any = 'light';
   console.log(useColorScheme());
 
   useEffect(() => {

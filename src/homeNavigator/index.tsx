@@ -1,20 +1,20 @@
-import HomeScreen from "../../screens/homeScreen";
+import HomeScreen from "../screens/homeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Image, View } from "react-native";
-import { DIMENSIONS } from "../../theme";
+import { DIMENSIONS } from "../theme";
 import { useSelector } from "react-redux";
 import HomeDrawerNavigator from "../homeDrawerNavigator";
-import MyTripsScreen from "../../screens/myTripsScreen";
-import DiscoverScreen from "../../screens/discoverScreen";
-import BookmarkScreen from "../../screens/bookmarkScreen";
-import SettingsScreen from "../../screens/settingsScreen";
+import MyTripsScreen from "../screens/myTripsScreen";
+import DiscoverScreen from "../screens/discoverScreen";
+import BookmarkScreen from "../screens/bookmarkScreen";
+import SettingsScreen from "../screens/settingsScreen";
 
 const Home = createBottomTabNavigator();
 
 // const Home = createStackNavigator();
 
 const HomeNavigator = () => {
-  const COLORS = useSelector((state) => state.theme.COLORS);
+  const COLORS = useSelector((state: any) => state.theme.COLORS);
   return (
     <Home.Navigator
       screenOptions={{
@@ -33,7 +33,6 @@ const HomeNavigator = () => {
           },
           shadowOpacity: 0.25,
           shadowRadius: 3.5,
-          elevation: 0
         }
       }}
     >

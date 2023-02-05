@@ -41,7 +41,7 @@ const OnBoardScreen = ({ navigation }) => {
 
   const Navigation = useNavigation();
 
-  const COLORS = useSelector((state) => state.theme.COLORS);
+  const COLORS = useSelector((state:any) => state.theme.COLORS);
 
   const Item = ({ item }) => {
     return (

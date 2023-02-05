@@ -15,9 +15,9 @@ import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 
 const RegisterScreen = () => {
-  const COLORS = useSelector((state) => state.theme.COLORS);
+  const COLORS = useSelector((state:any) => state.theme.COLORS);
   console.log(DIMENSIONS.WIDTH, DIMENSIONS.HEIGHT);
-  const Navigation = useNavigation("LoginPage");
+  const Navigation = useNavigation();
 
   const [onChangeCity, setOnChangeCity] = useState("");
   const [onChangeName, setOnChangeName] = useState("");

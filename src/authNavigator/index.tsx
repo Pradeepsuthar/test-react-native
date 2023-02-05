@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import LoginScreen from "../../screens/loginScreen";
-import RegisterScreen from "../../screens/registerScreen";
+import LoginScreen from "../screens/loginScreen";
+import RegisterScreen from "../screens/registerScreen";
 import HomeNavigator from "../homeNavigator";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Auth = createStackNavigator();
 
 const AuthNavigator = () => {
-  const [isAlreadyLogin, setIsAlreadyLogin] = useState(null);
+  const [isAlreadyLogin, setIsAlreadyLogin] = useState(Boolean);
 
   useEffect(() => {
     AsyncStorage.getItem("alreadyLogin").then((value) => {

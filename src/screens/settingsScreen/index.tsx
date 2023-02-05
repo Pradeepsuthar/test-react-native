@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const SettingsScreen = () => {
-  const COLORS = useSelector((state) => state.theme.COLORS);
+  const COLORS = useSelector((state:any) => state.theme.COLORS);
   return (
     <View
       style={{

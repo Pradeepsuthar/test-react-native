@@ -1,6 +1,6 @@
+import React from 'react';
 import {Provider} from 'react-redux';
 import IndexNavigator from './src/navigators';
-import React from 'react';
 import store from './src/store/store';
 import {NavigationContainer} from '@react-navigation/native';
 import Theme from './src/theme';

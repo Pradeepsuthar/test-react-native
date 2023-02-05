@@ -7,7 +7,7 @@ import { useNavigation } from "@react-navigation/native";
 const MyProfileScreen = () => {
   const Navigation = useNavigation();
 
-  const COLORS = useSelector((state) => state.theme.COLORS);
+  const COLORS = useSelector((state:any) => state.theme.COLORS);
   return (
     <View
       style={{

@@ -12,22 +12,23 @@ import {
   DrawerContentScrollView,
   DrawerItemList
 } from "@react-navigation/drawer";
-import HomeScreen from "../../screens/homeScreen";
+
 import { useSelector } from "react-redux";
-import MyProfileScreen from "../../screens/myProfileScreen";
+import MyProfileScreen from "../screens/myProfileScreen";
+import HomeScreen from "../screens/homeScreen";
 
 const { width, height } = Dimensions.get("window");
 
 const Drawer = createDrawerNavigator();
 
 const HomeDrawerNavigator = () => {
-  const COLORS = useSelector((state) => state.theme.COLORS);
+  const COLORS = useSelector((state:any) => state.theme.COLORS);
 
   return (
     <Drawer.Navigator
       drawerContent={(props) => {
         return (
-          <View style={{ flex: 1,}}>
+          <View style={{ flex: 1, }}>
             <DrawerContentScrollView
               {...props}
               contentContainerStyle={{
@@ -77,7 +78,7 @@ const HomeDrawerNavigator = () => {
               }}
             >
               <TouchableOpacity
-                onPress={() => {}}
+                onPress={() => { }}
                 style={{ paddingVertical: 15 }}
               >
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -101,7 +102,7 @@ const HomeDrawerNavigator = () => {
                 </View>
               </TouchableOpacity>
               <TouchableOpacity
-                onPress={() => {}}
+                onPress={() => { }}
                 style={{ paddingVertical: 15 }}
               >
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -138,7 +139,7 @@ const HomeDrawerNavigator = () => {
           fontSize: 15,
           fontWeight: "bold"
         },
-        
+
       }}
     >
       <Drawer.Screen

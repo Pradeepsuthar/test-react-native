@@ -2,11 +2,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import OnBoardScreen from "../screens/onBoardScreen";
-import AuthNavigator from "./authNavigator";
+import AuthNavigator from "../authNavigator";
+
 const Stack = createStackNavigator();
 
 const IndexNavigator = () => {
-  const [isFirstLaunch, setIsFirstLaunch] = useState(null);
+  const [isFirstLaunch, setIsFirstLaunch] = useState(Boolean);
 
   useEffect(() => {
     AsyncStorage.getItem("alreadyLaunched").then((value) => {
